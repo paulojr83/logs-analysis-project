@@ -1,17 +1,19 @@
 {% extends "layout.html" %}
 {% block content %}
 <div class="container">
-    <div class="jumbo">
-        <h1 class="display-4">Reports</h1>
-    </div>
 
-   <div class="list-group">
-       <a href="#" class="list-group-item list-group-item-action">Reports</a>
-        <h3><a class="list-group-item list-group-item-action" href ="{{url_for('percentage_error') }}" >Percentage Error</a><br><h3>
-        <h3><a class="list-group-item list-group-item-action" href ="{{url_for('articles') }}" >The most popular three articles of all time</a><br><h3>
-        <h3><a class="list-group-item list-group-item-action" href ="{{url_for('most_popular') }}" >Most Popular Author</a><br><h3>ton>
-    </div>
-
+    <p>
+        <h1 class="display-4">Reports </h1>
+    </p>
+    <p class="justify-content-between">
+    <hr>
+    <h5>Percentage Error <a href ="{{url_for('percentage_error') }}" ><span class="badge badge-pill badge-info"><i class="fa fa-eye" aria-hidden="true"></i></span></a></h5>
+    <hr>
+    <h5>The most popular three articles of all time <a href ="{{url_for('articles') }}" ><span class="badge badge-pill badge-info"><i class="fa fa-eye" aria-hidden="true"></i></span></a></h5>
+    <hr>
+    <h5>Most Popular Author <a href ="{{url_for('most_popular') }}" ><span class="badge badge-pill badge-info"><i class="fa fa-eye" aria-hidden="true"></i></span></a></h5>
+    <hr>
+    </p>
 </div>
 
 {% endblock %}
