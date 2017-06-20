@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="container">
+  <h1 class="display-4">Most Popular Authors </h1>
+
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Author</th>
+        <th>Amount</th>
+        <th>Detail</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for author in authors %}
+      <tr>
+        <td>{{author[0]}}</td>
+        <td>{{author[1]}}</td>
+        <th scope="row">
+          <a data-toggle="tooltip" data-placement="top" title="See detail" href="{{url_for('article_by_author', name = author[0])}}"><i class="fa fa-info fa-2x" aria-hidden="true"></i></i></a>
+        </th>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+
+</div>
+
+<script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+
+{% endblock %}

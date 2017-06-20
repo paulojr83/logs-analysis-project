@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+
+{% for error in erros %}
+
+<div class="container">
+    <h1 class="display-4">More than 1% of requests lead to errors </h1>
+    <p class="alert alert-warning" role="alert">
+    In <strong>{{error[0]}} </strong>, had more than <strong>{{ error[1] }}</strong>
+    </p>
+</div>
+<p>
+    <a class="navbar-brand" href="{{ url_for('report') }}"><strong> Back</strong></a>
+</p>
+
+{% endfor %}
+
+{% endblock %}

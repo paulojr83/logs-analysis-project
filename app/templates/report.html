@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+    <div class="jumbo">
+        <h1 class="display-4">Reports</h1>
+    </div>
+    <h3><a href ="{{url_for('percentage_error') }}" >Percentage Error</a><br><h3>
+    <h3><a href ="{{url_for('articles') }}" >The most popular three articles of all time</a><br><h3>
+    <h3><a href ="{{url_for('most_popular') }}" >Most Popular Author</a><br><h3>
+</div>
+
+{% endblock %}

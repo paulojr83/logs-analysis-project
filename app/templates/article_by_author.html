@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+<div class="container">
+    <h1 class="display-4">The articles of {{author}} </h1>
+    <p>
+        <a class="navbar-brand" href="{{ url_for('most_popular') }}"><strong> Back</strong></a>
+    </p>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Time</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for article in articles %}
+        <tr>
+          <td>{{ article[0] }}</td>
+          <td>{{ article[1] }}</td>
+          <td>{{ article[2] }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    </ul>
+    <p>
+        <a class="navbar-brand" href="{{ url_for('most_popular') }}"><strong> Back</strong></a>
+    </p>
+</div>
+
+
+{% endblock %}

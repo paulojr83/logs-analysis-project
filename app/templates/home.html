@@ -1,7 +1,51 @@
 {% extends "layout.html" %}
 {% block content %}
-  <div class="jumbo">
-<h2>Welcome to the Flask app<h2>
-    <h3>This is the home page for the Flask app<h3>
-  </div>
+
+ <div class="container">
+    <h1 class="display-4">Welcome to the logs analysis </h1>
+     <p> <strong> So what are we reporting, anyway? </strong></p>
+     <p>
+        Here are the questions the reporting tool should answer. The example answers given aren't the right ones, though!
+     </p>
+     <p>
+     <strong> 1. </strong> What are the most popular three articles of all time? Which articles have been accessed the most? Present this information as a sorted list with the most popular article at the top.
+     </p>
+     <strong> Example: </strong>
+
+    <p>
+        "Princess Shellfish Marries Prince Handsome" — <strong>1201 views</strong>
+    </p>
+    <p>
+        "Baltimore Ravens Defeat Rhode Island Shoggoths" — <strong>915 views</strong>
+    </p>
+    <p>
+        "Political Scandal Ends In Political Scandal" — <strong>553 views</strong>
+    </p>
+    <p>
+      <strong>  2. </strong> Who are the most popular article authors of all time? That is, when you sum up all of the articles each author has written, which authors get the most page views? Present this as a sorted list with the most popular author at the top.
+    </p>
+    <strong> Example: </strong>
+    <p>
+        Ursula La Multa — <strong> 2304 views</strong>
+    </p>
+    <p>
+        Rudolf von Treppenwitz — <strong> 1985 views</strong>
+    </p>
+    <p>
+        Markoff Chaney — <strong> 1723 views</strong>
+    </p>
+    <p>
+        Anonymous Contributor — <strong> 1023 views</strong>
+    </p>
+    <p>
+    <strong> 3.</strong> On which days did more than 1% of requests lead to errors? The log table includes a column status that indicates the HTTP status code that the news site sent to the user's browser. (Refer back to this lesson if you want to review the idea of HTTP status codes.)
+    </p>
+
+    <strong> Example: </strong>
+    <p>
+        July 29, 2016 — <strong> 2.5% errors</strong>
+    </p>
+ </div>
+
+
 {% endblock %}

@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-<title>Flask</title>
-    <strong><link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"></strong>
+    <title>Logs analysis project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.css.map') }}">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.min.css.map') }}">
   </head>
   <body>
-    <header>
-      <div class="container">
-        <h1 class="logo">Flask App</h1>
-        <strong><nav>
-          <ul class="menu">
-            <li><a href="{{ url_for('home') }}">Home</a></li>
-            <li><a href="{{ url_for('about') }}">About</a></li>
-          </ul>
-        </nav></strong>
-      </div>
+    <header class="container">
+
+      <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="{{ url_for('home') }}">Logs Analysis</a>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="{{ url_for('home') }}">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="{{ url_for('about') }}">About</a>
+            <a class="nav-item nav-link" href="{{ url_for('report') }}">Report</a>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <div class="container">
@@ -22,4 +33,10 @@
       {% endblock %}
     </div>
   </body>
+
+ <script src="{{ url_for('static', filename='js/jquery-3.1.1.slim.min.js') }}" ></script>
+ <script src="{{ url_for('static', filename='js/bootstrap.js') }}"  ></script>
+ <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"  ></script>
+ <script src="https://use.fontawesome.com/893157c1ad.js"></script>
+
 </html>
