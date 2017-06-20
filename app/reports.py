@@ -37,7 +37,7 @@ def most_popular_author():
     except psycopg2.Error as e:
         return e.pgerror
 
-
+"""list with all amount article by author, show the title, time and amount"""
 def amount_article_by_author(name):
     try:
         db, cursor = connect()
@@ -47,5 +47,3 @@ def amount_article_by_author(name):
         return amount_articles
     except psycopg2.Error as e:
         return e.pgerror
-
-##print  amount_article_by_author('Markoff Chaney')

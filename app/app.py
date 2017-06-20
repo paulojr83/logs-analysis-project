@@ -4,11 +4,9 @@ from flask import Flask, render_template, jsonify
 from reports import *
 app = Flask(__name__)
 
-
 @app.route('/')
 def home():
     return render_template('home.html')
-
 
 @app.route('/about')
 def about():
@@ -21,8 +19,8 @@ def report():
 @app.route('/report/error')
 def percentage_error():
     """
-    Methodo retorn a list with all author
-    :return json list of authors: 
+    Methodo retorn a list with all erros by time
+    :return json list of erros: 
     """
     try:
         Erros= percentage_error_and_time()
@@ -34,8 +32,8 @@ def percentage_error():
 @app.route('/report/articles')
 def articles():
     """
-    Methodo retorn a list with all author
-    :return json list of authors: 
+    Methodo retorn a list with three must popular article, show title and amount
+    :return json list three must popular article, show title and amount: 
     """
     try:
         Articles= articles_list()
@@ -47,8 +45,8 @@ def articles():
 @app.route('/report/most_popular')
 def most_popular():
     """
-    Methodo retorn a list with all author
-    :return json list of authors: 
+    Methodo retorn a list with three must populars authors, show author name and amount
+    :return json list of three must populars authors, show author name and amount: 
     """
     try:
         Authors= most_popular_author()
@@ -60,8 +58,8 @@ def most_popular():
 @app.route('/report/article_by_author/<string:name>',methods=['GET'])
 def article_by_author(name):
     """
-    Methodo retorn a list with all author
-    :return json list of authors: 
+    Methodo retorn a list with all amount article by author, show the title, time and amount
+    :return json list of amount article by author, show the title, time and amount: 
     """
     try:
         print name
@@ -70,7 +68,6 @@ def article_by_author(name):
 
     except (NoResultFound,MultipleResultsFound):
         return jsonify(error='No result Found!', code=404)
-
 
 if __name__ == '__main__':
     app.run(debug=True)

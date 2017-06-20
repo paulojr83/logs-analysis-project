@@ -4,9 +4,14 @@
     <div class="jumbo">
         <h1 class="display-4">Reports</h1>
     </div>
-    <h3><a href ="{{url_for('percentage_error') }}" >Percentage Error</a><br><h3>
-    <h3><a href ="{{url_for('articles') }}" >The most popular three articles of all time</a><br><h3>
-    <h3><a href ="{{url_for('most_popular') }}" >Most Popular Author</a><br><h3>
+
+   <div class="list-group">
+       <a href="#" class="list-group-item list-group-item-action">Reports</a>
+        <h3><a class="list-group-item list-group-item-action" href ="{{url_for('percentage_error') }}" >Percentage Error</a><br><h3>
+        <h3><a class="list-group-item list-group-item-action" href ="{{url_for('articles') }}" >The most popular three articles of all time</a><br><h3>
+        <h3><a class="list-group-item list-group-item-action" href ="{{url_for('most_popular') }}" >Most Popular Author</a><br><h3>ton>
+    </div>
+
 </div>
 
 {% endblock %}
