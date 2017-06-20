@@ -56,9 +56,23 @@ July 29, 2016 — 2.5% errors
 ## logs analysis Project
  Need some additional help getting started with the logs analysis Project.
 1. Set up the environment database: in conn.py YOUR_HOST, DATA_BASE, _PASSAWORD, DATA_BASE_NAME
- * For more information abou set up [Psycopg](http://initd.org/psycopg/docs/install.html)
+ *For more information abou set up [Psycopg](http://initd.org/psycopg/docs/install.html)
+2. Project structure SQL to  Postgres
+ *[Download the data](https://drive.google.com/open?id=0BxuM5ZG5WMYkUUt0WnlqQ1pOXzQ)
+ * Use the command psql then create a new user and database, for more information [how to create user in postgres](https://www.postgresql.org/docs/8.0/static/sql-createuser.html), then use the command psql -d youruser -f newsdata.sql.
+ #### Explore the data
+  * Once you have the data loaded into your database, connect to your database using psql -d news and explore the tables using the \dt and \d table commands and select statements.
 
-2. Run the project: in your terminal > python app/app.py access => than [http://localhost:5000/](http://localhost:5000/)
+  * \dt — display tables — lists the tables that are available in the database.
+  * \d table — (replace table with the name of a table) — shows the database schema for that particular table.
+  Get a sense for what sort of information is in each column of these tables.
+
+  #### The database includes three tables:
+  - The authors table includes information about the authors of articles.
+  - The articles table includes the articles themselves.
+  - The log table includes one entry for each time a user has accessed the site.
+
+3. Run the project: in your terminal > python app/app.py access => than [http://localhost:5000/](http://localhost:5000/)
 
 #### The webcasts for the logs analysis include:  
   * [Flask Templates](http://flask.pocoo.org/)
