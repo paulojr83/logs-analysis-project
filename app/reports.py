@@ -1,9 +1,6 @@
 from conn import *
 from scripts import *
 
-import json
-from flask import make_response
-
 """Returns a list with percentage of error, time."""
 def percentage_error_and_time():
     """

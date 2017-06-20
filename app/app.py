@@ -1,13 +1,7 @@
 from sqlalchemy.orm.exc import NoResultFound\
     , MultipleResultsFound
-
-from flask import Flask, render_template, jsonify, request, g, flash\
-    , redirect\
-    , url_for
-
+from flask import Flask, render_template, jsonify
 from reports import *
-
-import requests
 app = Flask(__name__)
 
 
