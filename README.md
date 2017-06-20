@@ -45,6 +45,14 @@ Anonymous Contributor — 1023 views
 Example:
 July 29, 2016 — 2.5% errors
 
+## Mobile screen logs analysis Project
+![alt text](https://github.com/paulojr83/logs-analysis-project/blob/master/mobile1.PNG "Welcome")
+![alt text](https://github.com/paulojr83/logs-analysis-project/blob/master/mobile2.PNG "About")
+![alt text](https://github.com/paulojr83/logs-analysis-project/blob/master/mobile3.PNG "Reports")
+![alt text](https://github.com/paulojr83/logs-analysis-project/blob/master/mobile4.PNG "Menu")
+![alt text](https://github.com/paulojr83/logs-analysis-project/blob/master/mobile5.PNG "Example report")
+
+
 ## logs analysis Project
  Need some additional help getting started with the logs analysis Project.
 1. Set up the environment database: in conn.py YOUR_HOST, DATA_BASE, _PASSAWORD, DATA_BASE_NAME
